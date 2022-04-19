@@ -1,0 +1,4 @@
+include ':model'
+include ':domain'
+include ':app'
+rootProject.name = "javademo"
