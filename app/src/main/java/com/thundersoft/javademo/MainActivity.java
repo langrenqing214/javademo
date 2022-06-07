@@ -1,5 +1,6 @@
 package com.thundersoft.javademo;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,6 +51,7 @@ public class MainActivity extends BaseActivity<LoginViewModel> {
             public void onChanged(LoginBean loginBean) {
                 if (loginBean.isLogin()) {
                     Toast.makeText(MainActivity.this, "登录成功，name == " + loginBean.getName() + " pwd == " + loginBean.getPwd(), Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(MainActivity.this, InfoActivity.class));
                 } else {
                     Toast.makeText(MainActivity.this, "登录失败", Toast.LENGTH_LONG).show();
                 }
